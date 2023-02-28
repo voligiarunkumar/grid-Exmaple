@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+.wrapper {
+  display: flex;
+  position: relative;
+  background-color: #837188 !important;
+
+}
+
+.wrapper .sidebar {
+  width: 90px;
+  height: 100%;
+  background: rgb(102, 101, 101);
+  padding: 30px 0px;
+  position: fixed;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #bdb8d7;
+  overflow-y: auto;
+  z-index: 1;
+  transition: width 0.2s ease-out;
+}
+.wrapper .sidebar:hover{
+  width: 200px;
+
+}
+.wrapper .sidebar::-webkit-scrollbar {
+  width: 2px !important;
+  height: 5px !important;
+}
+.wrapper .sidebar::-webkit-scrollbar-track {
+  background: #594f8d;
+}
+
+.wrapper .sidebar h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-weight: 400;
+}
+.wrapper .sidebar ul li li{
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+
+}
+
+.wrapper .sidebar ul li li:hover{
+  background: #b7afdb !important;
+}
+
+.wrapper .sidebar ul li:hover {
+  background-color:  rgb(126, 106, 106);
+  cursor: pointer;
+}
+.wrapper .sidebar ul .No-Hover:hover{
+  background-color:  rgb(102, 101, 101) !important;
+}
+.active-class {
+  background-color: #594f8d;
+  padding: 5x;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 250px;
+  height: 100vh;
+  text-align: center;
+  padding-top: 300px;
+  /* background: "#bdb8d7" !important; */
+  color: orange;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: #837188 !important;
+}
+
+.wrapper .main_content .header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
+}
+
+.fa,.fas,.far,.material-icons {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+
+}
+
