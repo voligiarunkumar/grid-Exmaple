@@ -80,7 +80,6 @@ const Grids = () => {
             
               <div style={{
                 marginLeft:'200px',
-                marginTop:"50px"
               }}>
                 
                   <Grid style={{
@@ -89,6 +88,9 @@ const Grids = () => {
             buttonCount: 4,
             pageSizes: true
           }} data={dataResult} {...dataState} >
+            <GridToolbar>
+              <h1 style={{fontFamily:'serif'}}> <i class="fa fa-book"  style={{fontSize:'36px'}}></i>Manage Requests</h1>
+              </GridToolbar>
                     <GridToolbar  style={{marginBottom:'0px',marginTop:'0px'}}>
                   <b>FromDate</b> : &nbsp;&nbsp;&nbsp;
                  <DatePicker
