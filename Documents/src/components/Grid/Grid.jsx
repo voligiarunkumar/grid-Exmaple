@@ -20,6 +20,7 @@ import { Input,Checkbox } from "@progress/kendo-react-inputs";
 load(likelySubtags, currencyData, weekData, numbers, currencies, caGregorian, dateFields, timeZoneNames);
 import {esMessages} from './es.js';
 loadMessages(esMessages, 'es-ES');
+import Axios from 'axios';
 import { process } from '@progress/kendo-data-query';
 import {orders} from './order.js';
 const DATE_FORMAT = 'yyyy-mm-dd hh:mm:ss.SSS';
@@ -73,6 +74,13 @@ const Grids = () => {
   const exportPDF = () => {
     _pdfExport.save();
   };
+  const getjoke=()=>{
+    Axios.get('https://official-joke-api.appspot.com/random_joke').then(
+      (response)=>{
+        console.log(response);
+      }
+    )
+  }
   const defaultValue = new Date(2000, 2, 10, 13, 30, 0);
   const CustomerId= "Enter Customer";
   const userId = "EnterUserName";
@@ -127,7 +135,7 @@ const Grids = () => {
     >
       <Input id={userId} style={{width:"220px",marginBottom:"20px",marginRight:"1000px",marginTop:'0px'}} />
     </FloatingLabel>
-                      <button title="Export to Excel" className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-success" onClick={exportExcel}>
+                      <button title="Export to Excel" className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-success" onClick={getjoke}>
                       <i class="fa fa-search"/>Search
                       </button>&nbsp;
                       <button style={{width:"80px"}}className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-secondary" onClick={exportPDF}>X Clear</button>
